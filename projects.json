@@ -1,0 +1,14 @@
+[
+  {
+    "title": "blog",
+    "description": "hugoで生成したブログページ。",
+    "url": "https://elnlen.github.io/blog/",
+    "tag": "Blog"
+  },
+  {
+    "title": "千葉県 一時避難場所検索システム",
+    "description": "千葉県の一時避難場所を検索できる。千葉県が公開しているオープンデータを活用した。",
+    "url": "https://elnlen.github.io/Temporary-evacuation-sites-in-Chiba/",
+    "tag": "オープンデータ"
+  }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>elnlen.github.io</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>elnlen.github.io</h1>
+    <h3>Projects</h3>
+  </header>
+
+  <main class="container">
+    <div id="links-grid" class="grid"></div>
+  </main>
+
+  <script>
+    // JSONデータを読み込んでHTMLを生成する処理
+    async function loadProjects() {
+      try {
+        const response = await fetch('projects.json');
+        if (!response.ok) throw new Error('JSONの読み込みに失敗しました');
+        
+        const projects = await response.json();
+        const grid = document.getElementById('links-grid');
+
+        // 各プロジェクトのHTMLカードを生成
+        projects.forEach(project => {
+          const card = document.createElement('a');
+          card.className = 'card';
+          card.href = project.url;
+
+          card.innerHTML = `
+            <h2>${project.title}</h2>
+            <p>${project.description}</p>
+            <span class="tag">${project.tag}</span>
+          `;
+
+          grid.appendChild(card);
+        });
+
+      } catch (error) {
+        console.error(error);
+        document.getElementById('links-grid').innerHTML = '<p>データの読み込み中にエラーが発生しました。</p>';
+      }
+    }
+
+    // ページ読み込み時に実行
+    document.addEventListener('DOMContentLoaded', loadProjects);
+  </script>
+  <footer>
+	  <small><a href="https://elnlen.github.io/about/contact.html">お問い合わせ</a></small><br>
+	  <small><a href="https://elnlen.github.io/about/privacypolicy.html">プライバシーポリシー</a></small>
+</body>
+</html>
