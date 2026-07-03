@@ -21,13 +21,16 @@ footer {
 /*articleを横並びさせる用*/
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
 }
 
 article {
+    flex: 1 1 300px;
     background: lightskyblue;
-    width: 300px;
-    height: 200px;
-    margin: 10px;
+    max-width: 300px;
+    min-height: 150px;
 }
 
 header {
