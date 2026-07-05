@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://elnlen.github.io/evacuation-sites/sitemap.xml
