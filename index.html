@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>elnlen.github.io</title>
-<meta name="description" content="Web projects by elnlen." />
 <style>
 body {background-color:tan;}
 h1 {text-align:center;}
@@ -13,8 +12,17 @@ h3 {border-bottom:5px solid black;}
 </head>
 <body>
 <h1><a href="https://elnlen.github.io">elnlen.github.io</a></h1>
-  <h2>Web Projects</h2>
-  <h3><a href="https://elnlen.github.io/camcheck">camcheck</a></h3>
-<p>Tools for testing your device's cameras.</p>
+  <h1 style="text-align:left;">Projects</h1>
+  <h3><a href="https://elnlen.github.io/jmcr-nairinsa/">マイコンカーラリー内輪差自動計算</a> (26/8)</h3>
+  <p>マイコンカーにあった内輪差を計算する</p>
+  <h3><a href="https://elnlen.github.io/camcheck/">camcheck</a> (26/7)</h3>
+<p>Tools for testing your device's cameras on browser.</p>
+
+<div style="text-align:right;" id="lm">Last modified:</div>
+
+<script>
+let lm = document.getElementById("lm");
+lm.textContent += document.lastModified;
+</script>
 </body>
 </html>
